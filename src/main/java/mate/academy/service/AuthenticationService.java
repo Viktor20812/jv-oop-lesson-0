@@ -23,6 +23,6 @@ public class AuthenticationService {
             return false;
         }
 
-        return (userEmail.getPassword().equals(password)) ? true : false;
+        return userEmail != null && userEmail.getPassword().equals(password);
     }
 }
